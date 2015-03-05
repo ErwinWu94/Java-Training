@@ -17,7 +17,7 @@ public class TestClass {
 		String[][] makanan = new String[jumlahmakanan][2];
 		String makanan1;
 		String hargamakanan;
-
+		
 		for (int b = 0; b < jumlahmakanan; b++) {
 			System.out.println("Makanan ke " + (b + 1) + ": ");
 			makanan1 = scan.next();
@@ -30,7 +30,7 @@ public class TestClass {
 		do{
 		System.out.println("Masukkan Jumlah Minuman : ");
 		jumlahminuman = scan.nextInt();
-		}while(jumlahminuman>5);
+		}while(jumlahminuman>10);
 		
 		String[][] minuman = new String[jumlahminuman][2];
 		String minuman1;
