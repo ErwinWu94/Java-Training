@@ -6,10 +6,15 @@ public class Test {
 	public static void main(String[] args) {
 
 		System.out.println("Selamat Datang di Aplikasi Restoran\n\n");
-		System.out.println("Masukkan Jumlah Makanan : ");
+		
 		Scanner scan = new Scanner(System.in);
-		int jumlahmakanan = scan.nextInt();
-
+		
+		int jumlahmakanan;
+		do{
+		System.out.println("Masukkan Jumlah Makanan : ");
+		jumlahmakanan = scan.nextInt();
+		}while(jumlahmakanan>5);
+		
 		String[][] makanan = new String[jumlahmakanan][2];
 		String makanan1;
 		String hargamakanan;
@@ -22,9 +27,13 @@ public class Test {
 			hargamakanan = scan.next();
 			makanan[b][1] = hargamakanan;
 		}
+		
+		int jumlahminuman;
+		do{
 		System.out.println("Masukkan Jumlah Minuman : ");
-		int jumlahminuman = scan.nextInt();
-
+		jumlahminuman = scan.nextInt();
+		}while(jumlahminuman>5);
+		
 		String[][] minuman = new String[jumlahminuman][2];
 		String minuman1;
 		String hargaminuman;
