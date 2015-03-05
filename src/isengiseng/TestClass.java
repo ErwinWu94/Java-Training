@@ -5,14 +5,17 @@ import java.util.Scanner;
 public class TestClass {
 	public static void main(String[] args) {
 
-		System.out.println("Selamat Datang di Aplikasi Restoran\n\n");
+		System.out.println("Selamat Datang di Aplikasi Restoran\n\n"); 
+		
+		
+		
 		
 		Scanner scan = new Scanner(System.in);
 		int jumlahmakanan;
 		do{
 		System.out.println("Masukkan Jumlah Makanan : ");
 		jumlahmakanan = scan.nextInt();
-		}while(jumlahmakanan>5);
+		}while(jumlahmakanan>10);
 		
 		String[][] makanan = new String[jumlahmakanan][2];
 		String makanan1;
