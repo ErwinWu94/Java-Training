@@ -1,4 +1,4 @@
-package isengiseng;
+package src.isengiseng;
 
 import java.util.Scanner;
 
