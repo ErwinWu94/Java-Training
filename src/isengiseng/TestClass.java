@@ -7,9 +7,6 @@ public class TestClass {
 
 		System.out.println("Selamat Datang di Aplikasi Restoran\n\n"); 
 		
-		
-		
-		
 		Scanner scan = new Scanner(System.in);
 		int jumlahmakanan;
 		do{
@@ -47,16 +44,14 @@ public class TestClass {
 			minuman[c][1] = hargaminuman;
 		}
 
-		System.out.println("List Makanan");
-		System.out.println("************");
+		System.out.println("List Makanan\n************");
 		System.out.println("No." + "\tNama Makanan" + "\tHarga");
 		int no;
 		for (no = 0; no < jumlahmakanan; no++) {
 			System.out.println((no + 1) + "\t" + makanan[no][0] + "\t\t"
 					+ makanan[no][1]);
 		}
-		System.out.println("List Minuman");
-		System.out.println("************");
+		System.out.println("List Minuman\n************");
 		System.out.println("No." + "\tNama Minuman" + "\tHarga");
 		int nmr;
 		for (nmr = 0; nmr < jumlahminuman; nmr++) {
