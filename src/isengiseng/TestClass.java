@@ -2,7 +2,7 @@ package isengiseng;
 
 import java.util.Scanner;
 
-public class Test {
+public class TestClass {
 	public static void main(String[] args) {
 
 		System.out.println("Selamat Datang di Aplikasi Restoran\n\n");
@@ -58,14 +58,38 @@ public class Test {
 		String konfirmasi;
 		int pesanmakanan;
 		int pesanminuman;
+		
+		
 		do {
+			do{
 			System.out.println("Nomor Pesan Makanan : ");
 			pesanmakanan = scan.nextInt();
-			System.out
-					.println("Banyak " + makanan[pesanmakanan - 1][0] + " : ");
+			if(pesanmakanan<jumlahmakanan || pesanmakanan>jumlahmakanan){
+			
+				System.out.println("Makanan / Minuman melebihi/kurang dari data yang di daftar ");
+				
+			}
+			
+			}while(pesanmakanan<jumlahmakanan || pesanmakanan>jumlahmakanan);
+	
+			
+			
+			
+			System.out.println("Banyak " + makanan[pesanmakanan - 1][0] + " : ");
 			banyakpesanmakanan = scan.next();
+			do{
 			System.out.println("Nomor Pesan Minuman : ");
 			pesanminuman = scan.nextInt();
+			
+				
+				if(pesanminuman<jumlahminuman || pesanminuman>jumlahminuman){
+				
+					System.out.println("Makanan / Minuman melebihi/kurang dari data yang di daftar ");
+					
+				}
+				
+				}while(pesanmakanan<jumlahminuman || pesanmakanan>jumlahminuman);
+			
 			System.out
 					.println("Banyak " + minuman[pesanminuman - 1][0] + " : ");
 			banyakpesanminuman = scan.next();
