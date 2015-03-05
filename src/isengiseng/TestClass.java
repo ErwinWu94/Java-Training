@@ -2,14 +2,18 @@ package isengiseng;
 
 import java.util.Scanner;
 
-public class Test {
+public class TestClass {
 	public static void main(String[] args) {
 
 		System.out.println("Selamat Datang di Aplikasi Restoran\n\n");
-		System.out.println("Masukkan Jumlah Makanan : ");
+		
 		Scanner scan = new Scanner(System.in);
-		int jumlahmakanan = scan.nextInt();
-
+		int jumlahmakanan;
+		do{
+		System.out.println("Masukkan Jumlah Makanan : ");
+		jumlahmakanan = scan.nextInt();
+		}while(jumlahmakanan>5);
+		
 		String[][] makanan = new String[jumlahmakanan][2];
 		String makanan1;
 		String hargamakanan;
@@ -22,9 +26,12 @@ public class Test {
 			hargamakanan = scan.next();
 			makanan[b][1] = hargamakanan;
 		}
+		int jumlahminuman;
+		do{
 		System.out.println("Masukkan Jumlah Minuman : ");
-		int jumlahminuman = scan.nextInt();
-
+		jumlahminuman = scan.nextInt();
+		}while(jumlahminuman>5);
+		
 		String[][] minuman = new String[jumlahminuman][2];
 		String minuman1;
 		String hargaminuman;
@@ -58,14 +65,38 @@ public class Test {
 		String konfirmasi;
 		int pesanmakanan;
 		int pesanminuman;
+		
+		
 		do {
+			do{
 			System.out.println("Nomor Pesan Makanan : ");
 			pesanmakanan = scan.nextInt();
-			System.out
-					.println("Banyak " + makanan[pesanmakanan - 1][0] + " : ");
+			if(pesanmakanan<jumlahmakanan || pesanmakanan>jumlahmakanan){
+			
+				System.out.println("Makanan / Minuman melebihi/kurang dari data yang di daftar ");
+				
+			}
+			
+			}while(pesanmakanan<jumlahmakanan || pesanmakanan>jumlahmakanan);
+	
+			
+			
+			
+			System.out.println("Banyak " + makanan[pesanmakanan - 1][0] + " : ");
 			banyakpesanmakanan = scan.next();
+			do{
 			System.out.println("Nomor Pesan Minuman : ");
 			pesanminuman = scan.nextInt();
+			
+				
+				if(pesanminuman<jumlahminuman || pesanminuman>jumlahminuman){
+				
+					System.out.println("Makanan / Minuman melebihi/kurang dari data yang di daftar ");
+					
+				}
+				
+				}while(pesanmakanan<jumlahminuman || pesanmakanan>jumlahminuman);
+			
 			System.out
 					.println("Banyak " + minuman[pesanminuman - 1][0] + " : ");
 			banyakpesanminuman = scan.next();
